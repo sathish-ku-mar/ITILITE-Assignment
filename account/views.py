@@ -59,7 +59,7 @@ class UserViewSet(viewsets.ViewSet):
             user.last_login = timezone.now()
             user.save()
         else:
-            return Response('Login Failed', status=400)
+            return Response({'message': 'Login Failed'}, status=400)
         context = {
             'token': jwt_encode_handler(payload),
             'user_detail': {
