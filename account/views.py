@@ -1,15 +1,11 @@
 from django.utils import timezone
 
-from django.shortcuts import render
-
 # Create your views here.
 from .models import User
-from django.shortcuts import get_object_or_404
 from .serializers import UserSerializer
 from rest_framework import status, viewsets
 from rest_framework.response import Response
 from django.http.request import QueryDict
-from core.api_permission import UserAuthentication
 from core.authentication import is_authenticate
 from core.encryption import jwt_payload_handler, jwt_encode_handler
 
@@ -63,7 +59,7 @@ class UserViewSet(viewsets.ViewSet):
             user.last_login = timezone.now()
             user.save()
         else:
-            return Response('Login Faild', status=400)
+            return Response('Login Failed', status=400)
         context = {
             'token': jwt_encode_handler(payload),
             'user_detail': {

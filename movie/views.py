@@ -1,8 +1,5 @@
-from django.utils import timezone
-
 # Create your views here.
 from .models import Booking
-from django.shortcuts import get_object_or_404
 from .serializers import BookingSerializer, BookingListSerializer
 from rest_framework import status, viewsets
 from rest_framework.response import Response
@@ -52,11 +49,7 @@ class BookingViewSet(viewsets.ViewSet):
 
             obj.save()
 
-            context = {
-                'message': 'Ticket booked',
-                'data': serializer.data
-            }
-            return Response(context)
+            return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -83,11 +76,7 @@ class BookingViewSet(viewsets.ViewSet):
 
             obj.save()
 
-            context = {
-                'message': 'Ticket update',
-                'data': serializer.data
-            }
-            return Response(context)
+            return Response(serializer.data)
         return Response(serializer.errors, status=400)
 
     def delete(self, request, id, *args, **kwargs):

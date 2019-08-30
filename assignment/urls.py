@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'user/', include(('account.urls', 'account'), namespace='user')),
     path(r'movie/', include(('movie.urls', 'movie'), namespace='movie')),
+    path(r'event/', include(('event.urls', 'event'), namespace='event')),
 ]

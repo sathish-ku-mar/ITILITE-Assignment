@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Theater, Seat_Class, Screen, Movie, Show, Booking
+from .models import Theater, Seat_Class, Movie, Show, Booking
 
 
 class Seat_ClassSerializer(serializers.ModelSerializer):
