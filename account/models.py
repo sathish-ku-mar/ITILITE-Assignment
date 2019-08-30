@@ -10,7 +10,6 @@ class User(models.Model):
     )
 
     email = models.EmailField()
-    username = models.CharField(max_length=200, unique=True)
     password = models.TextField()
     name = models.CharField(max_length=200)
     phone = models.CharField(max_length=15, validators=[mobile_regex])

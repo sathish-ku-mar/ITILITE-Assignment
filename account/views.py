@@ -21,7 +21,7 @@ class UserViewSet(viewsets.ViewSet):
         """
                 To create the User
                 URL Structure: /user/signup/
-                Required Fields: 'name', 'email', 'phone', 'username', 'password', 'gender'
+                Required Fields: 'name', 'email', 'phone', 'password', 'gender'
         """
 
         data = QueryDict.dict(request.data)
