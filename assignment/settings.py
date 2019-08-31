@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'assignment.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'itilite',
-        'USER': 'sgroot',
-        'PASSWORD': 'tF8jzh78JffW$F2o',
-        'HOST': 'SG-itilite-1160-master.servers.mongodirector.com',   # Or an IP Address that your DB is hosted on
+        'NAME': 'ITILITE_database',
+        'USER': 'root',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
