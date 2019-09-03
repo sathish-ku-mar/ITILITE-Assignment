@@ -14,7 +14,7 @@ class Theater(models.Model):
     modified_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.Theater)
 
 
 class Screen(models.Model):
@@ -26,7 +26,7 @@ class Screen(models.Model):
     modified_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.name)
 
 
 class Seat_Class(models.Model):
@@ -39,7 +39,7 @@ class Seat_Class(models.Model):
     modified_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.name)
 
 
 class Movie(models.Model):
@@ -54,7 +54,7 @@ class Movie(models.Model):
     modified_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.name)
 
 
 class Show(models.Model):
