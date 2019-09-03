@@ -9,7 +9,7 @@ Vagrantfile.local
 *.sqlite3
 /env/
 /static_cdn/
-
+static/
 .idea
 *~
 # Compiled source #

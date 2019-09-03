@@ -11,7 +11,7 @@ class EventType(models.Model):
     modified_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.name)
 
 
 class Event(models.Model):
@@ -46,7 +46,7 @@ class EventSeatClass(models.Model):
     modified_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.name)
 
 
 class EventBooking(models.Model):
